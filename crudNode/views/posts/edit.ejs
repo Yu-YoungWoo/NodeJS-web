@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="container mb-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-1 pl-2 pr-2">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/posts">Board</a></li>
+          <li class="breadcrumb-item"><a href="/posts/<%= post._id %>"><%= post.title %></a></li>
+          <li class="breadcrumb-item active" aria-current="page">Edit Post</li>
+        </ol>
+      </nav>
+
+      <form action="/users/<%= username %>?_method=put" method="post">
+        <div class="form-group row">
+          <label for="currentPassword" class="col-sm-3 col-form-label">Current Password*</label>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
