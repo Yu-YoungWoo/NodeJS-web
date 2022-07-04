@@ -1,10 +1,11 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .breadcrumb-item {
   font-size: 0.8em !important;
 }
-.ellipsis{
+.ellipsis {
+
   display: block;
   width: 100%;
   white-space: nowrap;
@@ -14,6 +15,20 @@ body {
 
 .board-table {
   table-layout: fixed;
+}
+.board-table .date {
+  width: 100px;
+}
+
+.post-body {
+  white-space: pre-line; /* 2 */
+}
+.post-info {
+  font-size: 0.8em;
+}
+
+.user-form {
+  width: 400px;
 }
 .board-table .date {
   width: 100px;

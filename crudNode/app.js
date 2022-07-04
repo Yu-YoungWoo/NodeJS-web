@@ -11,9 +11,6 @@ var session = require("express-session");
 // DB
 var mongoose = require("mongoose");
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-
 var app = express();
 
 //dotenv
@@ -43,8 +40,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Router
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+app.use("/", require("./routes/home"));
+app.use("/posts", require("./routes/posts"));
+app.use("/users", require("./routes/users"));
 app.use(flash());
 app.use(
   session({
