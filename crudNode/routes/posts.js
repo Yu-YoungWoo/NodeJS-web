@@ -8,7 +8,7 @@ router.get("/", function (req, res) {
     .sort("-createdAt")
     .exec(function (err, posts) {
       if (err) return res.json(err);
-      res.render("posts/index", { posts: posts });
+      res.json(posts).render("posts/index", { posts: posts });
     });
 });
 

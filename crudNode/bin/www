@@ -8,6 +8,8 @@ var app = require("../app");
 var debug = require("debug")("test:server");
 var http = require("http");
 var https = require("https");
+// const http2 = require('http2');
+
 
 /**
  * Https openssl key
@@ -26,11 +28,18 @@ const options = {
 var httpsPort = normalizePort(process.env.HTTPS_PORT || "3000");
 app.set("httpsPort", httpsPort);
 
+// http2 Port
+// var http2Port = normalizePort(process.env.HTTP2_PORT);
+// app.set("http2Port", http2Port);
+
+
 /**
  * Create HTTP server.
  */
 
 var server_https = https.createServer(options, app);
+
+// var http2Port = http2.createSecureServer(options, app);
 
 /**
  * Listen on provided port, on all network interfaces. (HTTP)
