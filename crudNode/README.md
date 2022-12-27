@@ -19,7 +19,3 @@
 ## bcrypt
 
 - https://gofnrk.tistory.com/112
-
-## 참고 사이트
-
-- https://github.com/JJinuk/2021-2-webServerProgramming
